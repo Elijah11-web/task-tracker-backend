@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Task Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body data-page="index">
+
+  <header class="page-header">
+    <h1 id="pageTitle">Daily Task Tracker</h1>
+  </header>
+
+  <main class="page-container">
+
+    <section class="card card-tight">
+      <div class="chart-center">
+        <div class="chart-wrapper">
+          <canvas id="dailyChart"></canvas>
+          <div class="center-text" id="dailyPercent">0%</div>
+        </div>
+
+        <div class="week-mini">
+          <canvas id="weeklyChart"></canvas>
+          <div class="mini-text" id="weeklyPercent">0%</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Today’s Tasks</h2>
+
+      <div class="controls">
+        <select id="daySelect">
+          <option>Monday</option>
+          <option>Tuesday</option>
+          <option>Wednesday</option>
+          <option>Thursday</option>
+          <option>Friday</option>
+          <option>Saturday</option>
+          <option>Sunday</option>
+        </select>
+
+        <input id="taskInput" placeholder="New task">
+        <button id="addTask">Add</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Done</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="taskTableBody"></tbody>
+      </table>
+
+    </section>
+    <button id="clearTasks" class="clear-btn">Clear Tasks</button>
+
+
+  </main>
+
+  <!-- NAVBAR -->
+  <nav class="bottom-nav">
+  <a href="index.html" class="nav-item" data-page="index">
+    <img src="icons/daily.png" class="nav-icon-img">
+    <span class="nav-label">Daily</span>
+  </a>
+
+  <a href="habits.html" class="nav-item" data-page="habits">
+    <img src="icons/habits.png" class="nav-icon-img">
+    <span class="nav-label">Habits</span>
+  </a>
+
+  <a href="goals.html" class="nav-item" data-page="goals">
+    <img src="icons/goals.png" class="nav-icon-img">
+    <span class="nav-label">Goals</span>
+  </a>
+
+  <a href="focus.html" class="nav-item" data-page="focus">
+    <img src="icons/focus.png" class="nav-icon-img">
+    <span class="nav-label">Focus</span>
+  </a>
+
+  <a href="notes.html" class="nav-item" data-page="notes">
+    <img src="icons/notes.png" class="nav-icon-img">
+    <span class="nav-label">Notes</span>
+  </a>
+</nav>
+
+  <script src="app.js"></script>
+</body>
+</html>

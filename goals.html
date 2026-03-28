@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Goal Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<nav class="bottom-nav">
+  <a href="index.html" class="nav-item" data-page="index">
+    <img src="icons/daily.png" class="nav-icon-img">
+    <span class="nav-label">Daily</span>
+  </a>
+
+  <a href="habits.html" class="nav-item" data-page="habits">
+    <img src="icons/habits.png" class="nav-icon-img">
+    <span class="nav-label">Habits</span>
+  </a>
+
+  <a href="goals.html" class="nav-item" data-page="goals">
+    <img src="icons/goals.png" class="nav-icon-img">
+    <span class="nav-label">Goals</span>
+  </a>
+
+  <a href="focus.html" class="nav-item" data-page="focus">
+    <img src="icons/focus.png" class="nav-icon-img">
+    <span class="nav-label">Focus</span>
+  </a>
+
+  <a href="notes.html" class="nav-item" data-page="notes">
+    <img src="icons/notes.png" class="nav-icon-img">
+    <span class="nav-label">Notes</span>
+  </a>
+</nav>
+
+<body data-page="goals">
+
+  <!-- HEADER -->
+  <header class="page-header">
+    <h1 id="pageTitle">Goal Tracker</h1>
+
+    <!-- <div class="header-buttons">
+      <div class="hamburger" id="hamburger">☰</div>
+    </div> -->
+  </header>
+
+  <!-- MENU -->
+  <!-- <div class="menu-overlay" id="menuOverlay">
+    <div class="menu-content">
+      <a href="index.html">Daily Task Tracker</a>
+      <a href="habits.html">Habit Tracker</a>
+      <a href="goals.html">Goal Tracker</a>
+      <a href="focus.html">Focus / Pomodoro</a>
+      <a href="notes.html">Notes / Brain Dump</a>
+    </div>
+  </div> -->
+
+  <!-- EDIT GOAL OVERLAY -->
+<div class="edit-overlay" id="editOverlay">
+  <div class="edit-modal" id="editModal">
+    <h2>Edit Goal</h2>
+
+    <input id="editTitle" class="goal-input" placeholder="Goal title">
+    <textarea id="editDescription" class="goal-textarea" placeholder="Description"></textarea>
+
+    <select id="editCategory" class="goal-input">
+      <option>Health</option>
+      <option>Career</option>
+      <option>Learning</option>
+      <option>Finance</option>
+      <option>Personal</option>
+      <option>Other</option>
+    </select>
+
+    <input id="editStart" type="date" class="goal-input">
+    <input id="editTarget" type="date" class="goal-input">
+
+    <select id="editPriority" class="goal-input">
+      <option>Low</option>
+      <option>Medium</option>
+      <option>High</option>
+    </select>
+
+    <select id="editStatus" class="goal-input">
+      <option>Not started</option>
+      <option>In progress</option>
+      <option>Completed</option>
+      <option>Paused</option>
+    </select>
+
+    <button id="saveEdit" class="primary-btn">Save Changes</button>
+    <button id="cancelEdit" class="secondary-btn">Cancel</button>
+  </div>
+</div>
+
+  <!-- MAIN -->
+  <main class="page-container">
+
+    <!-- GOAL CREATION FORM -->
+    <section class="card">
+      <h2 class="section-title">Create a Goal</h2>
+
+      <input id="goalTitle" class="goal-input" placeholder="Goal title">
+
+      <textarea id="goalDescription" class="goal-textarea" placeholder="Description"></textarea>
+
+      <select id="goalCategory" class="goal-input">
+        <option value="">Category</option>
+        <option>Health</option>
+        <option>Career</option>
+        <option>Learning</option>
+        <option>Finance</option>
+        <option>Personal</option>
+        <option>Other</option>
+      </select>
+
+      <input id="goalStart" type="date" class="goal-input">
+      <input id="goalTarget" type="date" class="goal-input">
+
+      <select id="goalPriority" class="goal-input">
+        <option value="">Priority</option>
+        <option>Low</option>
+        <option>Medium</option>
+        <option>High</option>
+      </select>
+
+      <select id="goalStatus" class="goal-input">
+        <option>Not started</option>
+        <option>In progress</option>
+        <option>Completed</option>
+        <option>Paused</option>
+      </select>
+
+      <button id="addGoal" class="primary-btn">Add Goal</button>
+    </section>
+
+    <!-- GOALS LIST -->
+    <section class="goals-grid" id="goalsGrid"></section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

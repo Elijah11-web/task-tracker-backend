@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="notes">
+
+  <header class="notes-header">
+    <h1>Notes / Brain Dump</h1>
+  </header>
+
+  <main>
+    <div class="note-input-row">
+      <input id="noteInput" placeholder="Take a note...">
+      <button id="addNote">Add</button>
+    </div>
+
+    <div id="notesGrid" class="notes-grid"></div>
+  </main>
+
+  <!-- EDIT OVERLAY -->
+  <div id="editNoteOverlay" class="overlay">
+    <div class="overlay-content">
+      <h2>Edit Note</h2>
+      <textarea id="editNoteText"></textarea>
+
+      <div class="overlay-buttons">
+        <button id="saveNoteEdit">Save</button>
+        <button id="cancelNoteEdit">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="nav-item" data-page="index">
+      <img src="icons/daily.png" class="nav-icon-img">
+      <span class="nav-label">Daily</span>
+    </a>
+
+    <a href="habits.html" class="nav-item" data-page="habits">
+      <img src="icons/habits.png" class="nav-icon-img">
+      <span class="nav-label">Habits</span>
+    </a>
+
+    <a href="goals.html" class="nav-item" data-page="goals">
+      <img src="icons/goals.png" class="nav-icon-img">
+      <span class="nav-label">Goals</span>
+    </a>
+
+    <a href="focus.html" class="nav-item" data-page="focus">
+      <img src="icons/focus.png" class="nav-icon-img">
+      <span class="nav-label">Focus</span>
+    </a>
+
+    <a href="notes.html" class="nav-item active" data-page="notes">
+      <img src="icons/notes.png" class="nav-icon-img">
+      <span class="nav-label">Notes</span>
+    </a>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>

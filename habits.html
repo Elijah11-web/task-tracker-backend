@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Habit Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<nav class="bottom-nav">
+  <a href="index.html" class="nav-item" data-page="index">
+    <img src="icons/daily.png" class="nav-icon-img">
+    <span class="nav-label">Daily</span>
+  </a>
+
+  <a href="habits.html" class="nav-item" data-page="habits">
+    <img src="icons/habits.png" class="nav-icon-img">
+    <span class="nav-label">Habits</span>
+  </a>
+
+  <a href="goals.html" class="nav-item" data-page="goals">
+    <img src="icons/goals.png" class="nav-icon-img">
+    <span class="nav-label">Goals</span>
+  </a>
+
+  <a href="focus.html" class="nav-item" data-page="focus">
+    <img src="icons/focus.png" class="nav-icon-img">
+    <span class="nav-label">Focus</span>
+  </a>
+
+  <a href="notes.html" class="nav-item" data-page="notes">
+    <img src="icons/notes.png" class="nav-icon-img">
+    <span class="nav-label">Notes</span>
+  </a>
+</nav>
+
+<body data-page="habits">
+
+  <!-- HEADER -->
+  <header class="page-header">
+    <h1 id="pageTitle">Habit Tracker</h1>
+
+    <!-- <div class="header-buttons">
+      <div class="hamburger" id="hamburger">☰</div>
+    </div> -->
+  </header>
+
+  <!-- FULLSCREEN MENU -->
+  <!-- <div class="menu-overlay" id="menuOverlay">
+    <div class="menu-content">
+      <a href="index.html">Daily Task Tracker</a>
+      <a href="habits.html">Habit Tracker</a>
+      <a href="goals.html">Goal Tracker</a>
+      <a href="focus.html">Focus / Pomodoro</a>
+      <a href="notes.html">Notes / Brain Dump</a>
+    </div>
+  </div> -->
+
+  <!-- MAIN CONTENT -->
+  <main class="page-container">
+
+    <section class="card habits-card">
+
+      <!-- TOP: BIG TODAY CIRCLE + SMALL WEEK CIRCLE CENTERED -->
+      <div class="habits-top-center">
+        <div class="circle big-circle">
+          <svg viewBox="0 0 36 36">
+            <path class="bg"
+              d="M18 2.0845
+                 a 15.9155 15.9155 0 0 1 0 31.831
+                 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+            <path id="habitsDailyArc" class="fg" stroke-dasharray="0,100"
+              d="M18 2.0845
+                 a 15.9155 15.9155 0 0 1 0 31.831
+                 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+          </svg>
+          <div class="circle-label">
+            <span id="habitsDailyPercent">0%</span>
+            <small>Today</small>
+          </div>
+        </div>
+
+        <div class="circle small-circle">
+          <svg viewBox="0 0 36 36">
+            <path class="bg"
+              d="M18 2.0845
+                 a 15.9155 15.9155 0 0 1 0 31.831
+                 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+            <path id="habitsWeeklyArc" class="fg" stroke-dasharray="0,100"
+              d="M18 2.0845
+                 a 15.9155 15.9155 0 0 1 0 31.831
+                 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+          </svg>
+          <div class="circle-label small">
+            <span id="habitsWeeklyPercent">0%</span>
+            <small>Week</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- TITLE + DAY DROPDOWN -->
+      <div class="habits-header-row">
+        <h2 class="section-title">Today's Habits</h2>
+        <select id="habitDaySelect">
+          <option value="Sunday">Sunday</option>
+          <option value="Monday">Monday</option>
+          <option value="Tuesday">Tuesday</option>
+          <option value="Wednesday">Wednesday</option>
+          <option value="Thursday">Thursday</option>
+          <option value="Friday">Friday</option>
+          <option value="Saturday">Saturday</option>
+        </select>
+      </div>
+
+      <!-- TABLE HEADER -->
+      <div class="task-header">
+        <span>Habit</span>
+        <span>Done</span>
+        <span></span>
+      </div>
+
+      <!-- HABIT LIST -->
+      <ul class="task-list" id="habitsList"></ul>
+
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
