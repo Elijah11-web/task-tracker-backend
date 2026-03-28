@@ -669,7 +669,7 @@ updateFocusDisplay();
 /* ---------------------------
    GOOGLE SHEETS SYNC
 ----------------------------*/
-const BACKEND_URL = "https://your-backend.com/tasks"; // 🔁 replace with your backend URL
+const BACKEND_URL = "https://github.com/Elijah11-web/task-tracker-backend.git"; // 🔁 replace with your backend URL
 const SHEET_SOURCE_TAG = "__fromSheet__"; // tag to identify sheet-sourced tasks
 
 async function syncFromSheet() {
